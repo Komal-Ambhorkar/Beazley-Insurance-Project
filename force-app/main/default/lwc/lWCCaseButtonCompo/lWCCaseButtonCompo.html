@@ -1,0 +1,13 @@
+<template>
+    <lightning-card title="LWC Component">
+        <div class="slds-p-around_medium">
+            <template if:true={showEscalateButton}>
+                <lightning-button label="Escalate this Case" onclick={handleEscalateClick}></lightning-button>
+                <lightning-textarea if:true={showTextArea} label="Reason for Escalation" value={escalationReason} onchange={handleTextareaChange}></lightning-textarea>
+            </template>
+            <template if:true={showReopenButton}>
+                <lightning-button label="Reopen this Case" onclick={handleReopenClick}></lightning-button>
+            </template>
+        </div>
+    </lightning-card>
+</template>

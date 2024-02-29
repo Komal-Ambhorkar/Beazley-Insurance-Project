@@ -1,0 +1,20 @@
+<template>
+    <lightning-card title="Accounts with Related Contacts">
+        <lightning-button
+            variant="brand"
+            label="Show Accounts with Contacts"
+            title="Brand action"
+            onclick={searchAccountsHandler}
+        ></lightning-button> <br/>
+
+        Total Record ={TotalRecords} <BR/>
+
+        <div style="height: 600px;">
+            <lightning-datatable
+                key-field="Id"
+                data={accountList}
+                columns={accountColumns}
+            ></lightning-datatable>
+        </div>
+    </lightning-card>
+</template>
